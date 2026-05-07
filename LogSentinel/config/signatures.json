@@ -1,0 +1,94 @@
+{
+  "sqli_patterns": [
+    "' OR '1'='1", "' OR 1=1", "'; DROP TABLE", "UNION SELECT",
+    "union+select", "UNION+ALL+SELECT", "1=1--", "1' OR '1'='1",
+    "' AND 1=1", "SELECT * FROM", "INSERT INTO", "DELETE FROM",
+    "xp_cmdshell", "EXEC(", "EXECUTE(", "sp_executesql",
+    "CHAR(", "NCHAR(", "VARCHAR(", "CAST(", "CONVERT(",
+    "benchmark(", "sleep(", "waitfor delay", "pg_sleep",
+    "%27", "%22", "%3D", "0x", "0X", "@@version", "@@datadir",
+    "information_schema", "mysql.user", "sys.tables",
+    "' having 1=1", "GROUP BY", "ORDER BY 1--", "AND EXTRACTVALUE"
+  ],
+
+  "xss_patterns": [
+    "<script>", "<script ", "</script>", "javascript:",
+    "onerror=", "onload=", "onclick=", "onmouseover=",
+    "onfocus=", "onblur=", "onsubmit=", "onkeypress=",
+    "alert(", "confirm(", "prompt(", "eval(",
+    "document.cookie", "document.write", "window.location",
+    "String.fromCharCode", "<iframe", "<img src=",
+    "<svg onload", "<body onload", "&#", "%3Cscript",
+    "%3C%2Fscript%3E", "vbscript:", "data:text/html"
+  ],
+
+  "lfi_rfi_patterns": [
+    "../etc/passwd", "../../etc/passwd", "../../../etc/passwd",
+    "..%2F", "%2e%2e%2f", "....//", "..\\", "..%5c",
+    "/etc/passwd", "/etc/shadow", "/etc/hosts",
+    "/proc/self/environ", "/var/log/apache",
+    "C:\\Windows\\", "C:/Windows/", "C:\\boot.ini",
+    "php://input", "php://filter", "php://fd",
+    "file:///", "expect://", "zip://", "data://",
+    "/etc/issue", "/etc/motd", "boot.ini", "win.ini"
+  ],
+
+  "rce_patterns": [
+    "; ls ", "; cat ", "; id ", "; whoami", "; uname",
+    "| ls ", "| cat ", "| id ", "| whoami", "| uname",
+    "&& ls", "&& cat", "&& id", "&& whoami",
+    "`id`", "`whoami`", "`uname`", "$(id)", "$(whoami)",
+    "cmd.exe", "/bin/sh", "/bin/bash", "powershell",
+    "wget http", "curl http", "curl -o", "chmod +x",
+    "nc -e", "netcat", "ncat", "/dev/tcp/"
+  ],
+
+  "scanner_user_agents": [
+    "nikto", "sqlmap", "nmap", "masscan", "dirbuster",
+    "gobuster", "wfuzz", "burpsuite", "owasp zap", "zap",
+    "acunetix", "nessus", "openvas", "metasploit",
+    "w3af", "appscan", "webinspect", "qualys", "rapid7",
+    "python-requests", "python-urllib", "go-http-client",
+    "java/", "curl/", "libwww-perl", "lwp-trivial",
+    "scrapy", "wget/", "httrack", "harvest",
+    "zgrab", "masscan", "headless", "phantomjs"
+  ],
+
+  "suspicious_endpoints": [
+    "/admin", "/administrator", "/wp-admin", "/wp-login",
+    "/phpmyadmin", "/pma", "/mysql", "/db",
+    "/.env", "/.git", "/.svn", "/.htaccess", "/.htpasswd",
+    "/config.php", "/config.yml", "/config.json",
+    "/backup", "/backup.zip", "/dump.sql",
+    "/shell.php", "/cmd.php", "/webshell",
+    "/etc/passwd", "/proc/self",
+    "/cgi-bin/", "/cgi-bin/test-cgi",
+    "/api/v1/users", "/api/admin",
+    "/actuator", "/actuator/env", "/actuator/dump",
+    "/solr", "/jenkins", "/jmx-console"
+  ],
+
+  "thresholds": {
+    "brute_force_attempts":     5,
+    "brute_force_window_secs":  300,
+    "scanner_404_count":        20,
+    "scanner_404_window_secs":  60,
+    "ddos_requests_per_min":    200,
+    "slow_loris_connections":   50,
+    "ssh_fail_attempts":        5,
+    "ssh_fail_window_secs":     120
+  },
+
+  "severity_colors": {
+    "CRITICAL": "#dc2626",
+    "HIGH":     "#ea580c",
+    "MEDIUM":   "#d97706",
+    "LOW":      "#16a34a",
+    "INFO":     "#2563eb"
+  },
+
+  "known_attack_ips": [
+    "192.168.100.200",
+    "10.0.0.99"
+  ]
+}

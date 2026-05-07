@@ -1,0 +1,26 @@
+May  1 02:10:01 prod-server sshd[1000]: Failed password for root from 185.220.101.45 port 40000 ssh2
+May  1 02:10:15 prod-server sshd[1001]: Failed password for root from 185.220.101.45 port 40001 ssh2
+May  1 02:10:30 prod-server sshd[1002]: Failed password for root from 185.220.101.45 port 40002 ssh2
+May  1 02:10:45 prod-server sshd[1003]: Failed password for root from 185.220.101.45 port 40003 ssh2
+May  1 02:11:02 prod-server sshd[1004]: Failed password for root from 185.220.101.45 port 40004 ssh2
+May  1 02:11:20 prod-server sshd[1005]: Failed password for root from 185.220.101.45 port 40005 ssh2
+May  1 02:11:35 prod-server sshd[1006]: Failed password for root from 185.220.101.45 port 40006 ssh2
+May  1 02:11:50 prod-server sshd[1007]: Failed password for root from 185.220.101.45 port 40007 ssh2
+May  1 02:12:05 prod-server sshd[1008]: Failed password for root from 185.220.101.45 port 40008 ssh2
+May  1 02:12:22 prod-server sshd[1009]: Failed password for root from 185.220.101.45 port 40009 ssh2
+May  1 02:12:40 prod-server sshd[1010]: Failed password for root from 185.220.101.45 port 40010 ssh2
+May  1 02:12:58 prod-server sshd[1011]: Failed password for root from 185.220.101.45 port 40011 ssh2
+May  1 02:13:15 prod-server sshd[1012]: Failed password for root from 185.220.101.45 port 40012 ssh2
+May  1 02:13:30 prod-server sshd[1013]: Failed password for root from 185.220.101.45 port 40013 ssh2
+May  1 02:13:47 prod-server sshd[1014]: Failed password for root from 185.220.101.45 port 40014 ssh2
+May  1 02:14:02 prod-server sshd[1015]: Failed password for root from 185.220.101.45 port 40015 ssh2
+May  1 02:14:19 prod-server sshd[1016]: Failed password for root from 185.220.101.45 port 40016 ssh2
+May  1 02:14:36 prod-server sshd[1017]: Failed password for root from 185.220.101.45 port 40017 ssh2
+May  1 02:45:01 prod-server sshd[2020]: Accepted password for root from 185.220.101.45 port 41234 ssh2
+May  1 03:10:05 prod-server sudo[3001]: user www-data : TTY=unknown ; PWD=/var/www ; USER=root ; COMMAND=/bin/bash
+May  1 03:11:00 prod-server sshd[3010]: Failed password for ubuntu from 91.108.4.22 port 55000 ssh2
+May  1 03:11:05 prod-server sshd[3011]: Failed password for ubuntu from 91.108.4.22 port 55001 ssh2
+May  1 03:11:10 prod-server sshd[3012]: Failed password for ubuntu from 91.108.4.22 port 55002 ssh2
+May  1 03:11:15 prod-server sshd[3013]: Failed password for ubuntu from 91.108.4.22 port 55003 ssh2
+May  1 03:11:20 prod-server sshd[3014]: Failed password for ubuntu from 91.108.4.22 port 55004 ssh2
+May  1 03:11:25 prod-server sshd[3015]: Failed password for invalid user pi from 91.108.4.22 port 55005 ssh2

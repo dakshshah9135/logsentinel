@@ -1,0 +1,1 @@
+# LogSentinel core package

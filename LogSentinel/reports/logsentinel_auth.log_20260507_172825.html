@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<title>LogSentinel Report</title>
+<style>
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#f3f4f6;margin:0;padding:2rem;color:#111827}
+  .wrap{max-width:1000px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+  .hd{background:linear-gradient(135deg,#0f172a,#1a2b4a);color:#fff;padding:2rem 2.5rem}
+  .meta{background:#f8fafc;padding:1.25rem 2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;border-bottom:1px solid #e5e7eb}
+  .mc{text-align:center}.ml{font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}.mv{font-size:1.05rem;font-weight:700}
+  .sec{padding:1.5rem 2.5rem}.sec+.sec{border-top:1px solid #f1f5f9}
+  h2{font-size:14px;font-weight:700;color:#1e293b;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:2px solid #e5e7eb;margin-bottom:1rem}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f1f5f9;padding:8px 12px;text-align:left;font-size:11px;text-transform:uppercase;color:#475569;font-weight:600}
+  tr:nth-child(even){background:#f8fafc}
+  footer{text-align:center;padding:1rem;font-size:12px;color:#9ca3af;border-top:1px solid #f1f5f9}
+</style></head><body>
+<div class="wrap">
+  <div class="hd">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem">
+      <div style="width:42px;height:42px;background:#3b82f6;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px">🔍</div>
+      <div><div style="font-size:1.4rem;font-weight:800">LogSentinel</div>
+           <div style="font-size:11px;color:#94a3b8;letter-spacing:2px;text-transform:uppercase">Security Log Analyzer</div></div>
+    </div>
+    <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:1rem 1.5rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+      <div>
+        <div style="font-size:2.5rem;font-weight:900;color:#7c3aed;line-height:1">2</div>
+        <div style="font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px">Incidents</div>
+      </div>
+      <div style="flex:1">
+        <div style="font-size:12px;color:#94a3b8">LOG FILE</div>
+        <div style="font-size:13px;color:#fff;font-family:monospace;margin-top:3px">sample_logs/auth.log</div>
+        <div style="margin-top:10px"><span style="background:#7c3aed;color:#fff;padding:3px 12px;border-radius:5px;font-size:12px;font-weight:700;">OVERALL RISK: CRITICAL</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="mc"><div class="ml">Lines Parsed</div><div class="mv">26</div></div>
+    <div class="mc"><div class="ml">Web Entries</div><div class="mv">0</div></div>
+    <div class="mc"><div class="ml">SSH Entries</div><div class="mv">26</div></div>
+    <div class="mc"><div class="ml">Incidents</div><div class="mv" style="color:#7c3aed">2</div></div>
+    <div class="mc"><div class="ml">Unique IPs</div><div class="mv">2</div></div>
+    <div class="mc"><div class="ml">Scanned At</div><div class="mv" style="font-size:.8rem">2026-05-07 17:28:25</div></div>
+  </div>
+
+  <div class="sec">
+    <h2>Severity Summary</h2>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#7c3aed">1</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">CRITICAL</div></div><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#dc2626">1</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">HIGH</div></div><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #ea580c;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#ea580c">0</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">MEDIUM</div></div><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #ca8a04;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#ca8a04">0</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">LOW</div></div></div>
+  </div>
+
+  <div class="sec">
+    <h2>Detected Incidents (2)</h2>
+    
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#1 &nbsp;·&nbsp; SUCCESSFUL BRUTE FORCE</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 185.220.101.45 made 18 failed SSH login attempts — then SUCCESSFULLY authenticated (1 time(s)). Possible account compromise.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#7c3aed;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">CRITICAL</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 18</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 02:10:01 prod-server sshd[1000]: Failed password for root from 185.220.101.45 port 40000 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 02:10:15 prod-server sshd[1001]: Failed password for root from 185.220.101.45 port 40001 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 02:10:30 prod-server sshd[1002]: Failed password for root from 185.220.101.45 port 40002 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 02:10:45 prod-server sshd[1003]: Failed password for root from 185.220.101.45 port 40003 ssh2</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Immediately revoke session, rotate credentials, audit what was accessed.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>185.220.101.45</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#2 &nbsp;·&nbsp; BRUTE FORCE SSH</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 91.108.4.22 made 6 failed SSH login attempts.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 6</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 03:11:00 prod-server sshd[3010]: Failed password for ubuntu from 91.108.4.22 port 55000 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 03:11:05 prod-server sshd[3011]: Failed password for ubuntu from 91.108.4.22 port 55001 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 03:11:10 prod-server sshd[3012]: Failed password for ubuntu from 91.108.4.22 port 55002 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 03:11:15 prod-server sshd[3013]: Failed password for ubuntu from 91.108.4.22 port 55003 ssh2</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block IP 91.108.4.22 at the firewall. Enable fail2ban. Disable password-based SSH — use key auth only.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>91.108.4.22</code></div>
+        </div>
+  </div>
+
+  <div class="sec"><h2>Top Source IPs</h2><table><thead><tr><th>IP Address</th><th>Total Requests</th></tr></thead><tbody><tr><td style="padding:7px 12px;font-family:monospace;">185.220.101.45</td><td style="padding:7px 12px;text-align:center;">19</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">91.108.4.22</td><td style="padding:7px 12px;text-align:center;">6</td></tr></tbody></table></div>
+
+  <footer>LogSentinel v1.0 &nbsp;|&nbsp; Built by <strong>Daksh Shah</strong> &nbsp;|&nbsp; github.com/daksh-shah9135/logsentinel</footer>
+</div></body></html>

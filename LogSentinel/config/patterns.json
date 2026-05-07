@@ -1,0 +1,108 @@
+{
+  "sql_injection_patterns": [
+    "' OR '1'='1", "' OR 1=1", "' OR 'x'='x", "1=1--", "1' OR '1'='1",
+    "UNION SELECT", "union select", "UNION ALL SELECT", "union all select",
+    "DROP TABLE", "drop table", "INSERT INTO", "DELETE FROM",
+    "'; DROP", "1; DROP", "' AND 1=0", "' AND 1=1",
+    "xp_cmdshell", "exec(", "EXEC(", "EXECUTE(",
+    "SLEEP(", "sleep(", "BENCHMARK(", "WAITFOR DELAY",
+    "ORDER BY 1--", "GROUP BY", "HAVING 1=1",
+    "%27", "%20OR%20", "0x", "char(", "CHAR(",
+    "information_schema", "sys.tables", "sysobjects",
+    "' OR ''='", "admin'--", "' OR 'unusual'='unusual",
+    "../../../../", "..%2F", "%2e%2e%2f"
+  ],
+
+  "xss_patterns": [
+    "<script>", "</script>", "<SCRIPT>",
+    "javascript:", "JAVASCRIPT:",
+    "onload=", "onerror=", "onclick=", "onmouseover=",
+    "alert(", "ALERT(", "prompt(", "confirm(",
+    "<img src=x", "<svg onload", "<iframe",
+    "document.cookie", "document.write",
+    "%3Cscript%3E", "%3C%2Fscript%3E",
+    "eval(", "expression(",
+    "<body onload", "<input onfocus",
+    "String.fromCharCode", "&#x"
+  ],
+
+  "directory_traversal_patterns": [
+    "../", "..\\", "..%2F", "..%5C",
+    "%2e%2e%2f", "%2e%2e/", "..%c0%af",
+    "....//", "....\\\\",
+    "/etc/passwd", "/etc/shadow", "/etc/hosts",
+    "C:\\Windows\\", "C:/Windows/",
+    "/proc/self/", "boot.ini",
+    "win.ini", "/var/log/", "../../",
+    "%252e%252e", "..%255c"
+  ],
+
+  "command_injection_patterns": [
+    "; ls", "| ls", "&& ls", "; cat ", "| cat ",
+    "; whoami", "| whoami", "&& whoami",
+    "; id;", "| id", "; pwd", "| pwd",
+    "; rm -rf", "| rm -", "; wget ", "| wget ",
+    "; curl ", "| curl ", "; nc ", "| nc ",
+    "; python", "| python", "; perl", "| perl",
+    "$(", "`", "%60", "%24%28",
+    "&&cat", ";cat", "|cat", "||cat"
+  ],
+
+  "scanner_user_agents": [
+    "nikto", "nmap", "masscan", "sqlmap", "nessus",
+    "openvas", "acunetix", "burpsuite", "ZAP",
+    "w3af", "grabber", "wfuzz", "dirb", "gobuster",
+    "hydra", "medusa", "metasploit", "nuclei",
+    "python-requests/", "python-urllib", "libwww-perl",
+    "curl/", "wget/", "Go-http-client", "Java/",
+    "zgrab", "shodan", "censys", "360Spider",
+    "Scrapy", "HTTrack", "webshag", "whatweb"
+  ],
+
+  "sensitive_paths": [
+    "/admin", "/administrator", "/wp-admin", "/phpmyadmin",
+    "/phpMyAdmin", "/.env", "/.git", "/.git/config",
+    "/config.php", "/wp-config.php", "/database.yml",
+    "/backup", "/backup.zip", "/db.sql", "/dump.sql",
+    "/.htaccess", "/.htpasswd", "/server-status",
+    "/actuator", "/actuator/env", "/actuator/health",
+    "/api/v1/admin", "/swagger", "/swagger-ui.html",
+    "/console", "/jmx-console", "/web-console",
+    "/etc/passwd", "/etc/shadow",
+    "/robots.txt", "/sitemap.xml", "/crossdomain.xml",
+    "/.well-known/", "/cgi-bin/", "/shell.php",
+    "/webshell", "/cmd.php", "/backdoor"
+  ],
+
+  "brute_force": {
+    "ssh_failed_threshold":    5,
+    "http_auth_threshold":     10,
+    "login_endpoint_threshold": 8,
+    "time_window_seconds":     60
+  },
+
+  "http_error_thresholds": {
+    "404_spike_threshold":     20,
+    "500_spike_threshold":     10,
+    "403_spike_threshold":     15
+  },
+
+  "severity_weights": {
+    "BRUTE_FORCE":         "HIGH",
+    "SQL_INJECTION":       "CRITICAL",
+    "XSS":                 "HIGH",
+    "DIRECTORY_TRAVERSAL": "HIGH",
+    "COMMAND_INJECTION":   "CRITICAL",
+    "SCANNER_DETECTED":    "MEDIUM",
+    "SENSITIVE_PATH":      "MEDIUM",
+    "ERROR_SPIKE":         "LOW",
+    "MASS_REQUEST":        "MEDIUM"
+  },
+
+  "risk_scores": {
+    "CRITICAL": 40,
+    "HIGH":     25,
+    "MEDIUM":   12,
+    "LOW":       5
+  }
+}

